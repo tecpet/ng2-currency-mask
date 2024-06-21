@@ -202,8 +202,9 @@ export class InputHandler {
     private setCursorPosition(event: any): void {
         let rawValueWithoutSuffixEndPosition = this.inputService.getRawValueWithoutSuffixEndPosition();
 
+        const inputElement = event.target;
         setTimeout(function () {
-            event.target.setSelectionRange(rawValueWithoutSuffixEndPosition, rawValueWithoutSuffixEndPosition);
+            inputElement.setSelectionRange(rawValueWithoutSuffixEndPosition, rawValueWithoutSuffixEndPosition);
         }, 0);
     }
 }
